@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Principal/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Principal/">
+
+<xs:element name="borrar_usuario" type="tns:borrar_usuario"/>
+
+<xs:element name="borrar_usuarioResponse" type="tns:borrar_usuarioResponse"/>
+
+<xs:element name="consulta_usuario" type="tns:consulta_usuario"/>
+
+<xs:element name="consulta_usuarioResponse" type="tns:consulta_usuarioResponse"/>
+
+<xs:element name="insertar_usuario" type="tns:insertar_usuario"/>
+
+<xs:element name="insertar_usuarioResponse" type="tns:insertar_usuarioResponse"/>
+
+<xs:element name="modificar_usuario" type="tns:modificar_usuario"/>
+
+<xs:element name="modificar_usuarioResponse" type="tns:modificar_usuarioResponse"/>
+
+<xs:complexType name="modificar_usuario">
+<xs:sequence>
+<xs:element name="id_usuario" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="edad" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificar_usuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consulta_usuario">
+<xs:sequence>
+<xs:element name="id_usuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consulta_usuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_usuario">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="edad" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertar_usuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrar_usuario">
+<xs:sequence>
+<xs:element name="id_usuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrar_usuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
